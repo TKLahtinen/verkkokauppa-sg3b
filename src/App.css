@@ -22,3 +22,7 @@ footer{
   height: 250px;
   background-color: gray;
 }
+
+.headerLeft{
+  width: 150px;
+}

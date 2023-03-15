@@ -8,7 +8,7 @@ div .tuote{
 
 header{
   width: 100%;
-  height: 100px;
+  height: 125px;
   background-color: #c1d3fe;
 }
 
@@ -24,10 +24,20 @@ footer{
 }
 
 .headerLeft{
-  width: 75px;
-  margin-left: 5px;
+  width: 100px;
 }
 
 .headerRight{
   margin-right: 5px;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+  font-size: larger;
+  font-weight: bolder;
+}
+
+a:hover{
+  color: gray;
 }

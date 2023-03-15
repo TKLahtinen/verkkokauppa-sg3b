@@ -4,7 +4,7 @@ export default function Container() {
   return (
     <div className='container '>
       <div className="d-flex justify-content-center mt-3">
-        <img className='w-100' src="https://cdn.discordapp.com/attachments/1084753750608072805/1085160668040265738/kenka.png" alt="" />
+        <img className='w-100' src="https://media.discordapp.net/attachments/1084753750608072805/1085161920149065809/kenka2.png?width=1440&height=617" alt="" />
       </div>
       <div className="d-flex flex-nowrap">
         <div className="card w-25 m-3">

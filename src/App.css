@@ -24,5 +24,10 @@ footer{
 }
 
 .headerLeft{
-  width: 150px;
+  width: 75px;
+  margin-left: 5px;
+}
+
+.headerRight{
+  margin-right: 5px;
 }

@@ -6,7 +6,7 @@ export default function Navbar() {
   return (
     <nav className='d-flex justify-content-center align-items-center'>
       <Link className='mx-3' to="/Tennarit">Tennarit</Link>
-      <a href="" className='mx-3'>Kengät</a>
+      <Link className='mx-3' to="/Kengat">Kengät</Link>
       <a href="" className='mx-3'>Tarvikkeet</a>
       <a href="" className='mx-3'>Muu</a>
     </nav>

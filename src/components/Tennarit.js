@@ -24,16 +24,16 @@ export default function Tennarit() {
   }, [])
 
   return (
-  <> 
+  <div className='container d-flex'> 
     {items.map(item => (
     <div class="card m-3" key={item.id}>
         <img src={item.img} class="card-img-top w-100" alt="..." />
       <div class="card-body">
-        <h5 class="card-title">{item.nimi}</h5>
+        <h5 class="card-title">{item.nimi} {item.hinta}€</h5>
         <p class="card-text">{item.kuvaus}</p>
       </div>
     </div>
     ))}  
-  </>
+  </div>
   )
 }

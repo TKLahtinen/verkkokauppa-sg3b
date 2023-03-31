@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Home() {
   return (
-    <>
+    <div className='container'>
       <div className="d-flex justify-content-center mt-3">
         <img className='w-100' src="https://media.discordapp.net/attachments/1084753750608072805/1085161920149065809/kenka2.png?width=1440&height=617" alt="" />
       </div>
@@ -36,6 +36,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   )
 }

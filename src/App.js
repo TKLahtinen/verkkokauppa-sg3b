@@ -13,13 +13,13 @@ function App() {
     <>
     <Header />
     <Navbar />
-    <div className="container d-flex">
+    <>
       <Routes>
         <Route path="*" element={<Home />} />
         <Route path="/Tennarit" element={<Tennarit />} />
         <Route path="/Kengat" element={<Kengat />} />
       </Routes>
-    </div>
+    </>
     <Footer />
     </>
   );

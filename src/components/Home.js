@@ -1,10 +1,11 @@
 import React from 'react'
+import carousel1 from '../images/3beluga_rdy.jpg'
 
 export default function Home() {
   return (
     <div className='container'>
       <div className="d-flex justify-content-center mt-3">
-        <img className='w-100' src="https://media.discordapp.net/attachments/1084753750608072805/1085161920149065809/kenka2.png?width=1440&height=617" alt="" />
+        <img className='w-100' src={carousel1} alt="" />
       </div>
       <div className="d-flex flex-nowrap">
         <div className="card w-25 m-3">

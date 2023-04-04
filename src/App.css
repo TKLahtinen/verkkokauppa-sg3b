@@ -31,13 +31,20 @@ footer{
   margin-right: 5px;
 }
 
-a{
+a.navlink{
   text-decoration: none;
   color: white;
   font-size: larger;
   font-weight: bolder;
 }
 
-a:hover{
+a.navlink :hover{
   color: gray;
+}
+
+a.productlink{
+  text-decoration: none;
+  color: black;
+  font-size: larger;
+  font-weight: bolder;
 }

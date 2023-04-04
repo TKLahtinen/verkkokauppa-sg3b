@@ -4,9 +4,7 @@ import Header from './components/Header';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './components/Home';
-import { Route,Routes,Switch } from 'react-router-dom';
-import Tennarit from './components/Tennarit';
-import Kengat from './components/Kengat';
+import { Route,Routes } from 'react-router-dom';
 import Product from './components/Product';
 import Products from './components/Products';
 

@@ -7,8 +7,10 @@ export default function Navbar() {
     <nav className='d-flex justify-content-center align-items-center'>
       <Link className='mx-3 navlink' to="/tuotteet/sneakerit">Sneakerit</Link>
       <Link className='mx-3 navlink' to="/tuotteet/crocsit">Crocsit</Link>
-      <a href="" className='mx-3 navlink'>Tarvikkeet</a>
-      <a href="" className='mx-3 navlink'>Muu</a>
+      <Link className='mx-3 navlink' to="/tuotteet/saappaat-ja-talvikengat">Saappaat ja talvikengat</Link>
+      <Link className='mx-3 navlink' to="/tuotteet/juoksukengat">Juoksukengat</Link>
+      <Link className='mx-3 navlink' to="/tuotteet/puvunkengat">Puvunkengat</Link>
+
     </nav>
   )
 }

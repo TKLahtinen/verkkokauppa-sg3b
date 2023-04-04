@@ -8,6 +8,7 @@ import { Route,Routes,Switch } from 'react-router-dom';
 import Tennarit from './components/Tennarit';
 import Kengat from './components/Kengat';
 import Product from './components/Product';
+import Products from './components/Products';
 
 function App() {
   return (
@@ -17,9 +18,8 @@ function App() {
     <>
       <Routes>
         <Route path="*" element={<Home />} />
-        <Route path="/Tennarit" element={<Tennarit />} />
-        <Route path="/Kengat" element={<Kengat />} />
-        <Route path="/Tennarit/:tuoteid" element={<Product />} />
+        <Route path="/tuotteet/:tr" element={<Products />} />
+        <Route path="/tuote/:tuoteid" element={<Product />} />
       </Routes>
     </>
     <Footer />

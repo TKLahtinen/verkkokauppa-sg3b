@@ -1,9 +1,10 @@
 import React from 'react'
 import axios from 'axios'
 import { useEffect,useState } from 'react'
-import { json } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-const URL = 'http://localhost:3001/phpbackend/getProducts.php?tr=1';
+
+const URL = 'http://localhost:3001/phpbackend/getProducts.php?tr=saappaat-ja-talvikengat';
 
 
 export default function Tennarit() {
@@ -24,16 +25,17 @@ export default function Tennarit() {
   }, [])
 
   return (
-  <div className='container d-flex'> 
-    {items.map(item => (
-    <div class="card m-3" key={item.id}>
-        <img src={item.img} class="card-img-top w-100" alt="..." />
-      <div class="card-body">
-        <h5 class="card-title">{item.nimi} {item.hinta}€</h5>
-        <p class="card-text">{item.kuvaus}</p>
-      </div>
+  <div className='container d-flex'>
+    <div className="row">
+      {items.map(item => (
+      <Link to={'/Tennarit/' + item.tuoteid} className="card m-3 w-25 p-0 productlink" key={item.id}>
+          <img src={item.img} class="card-img-top w-100 " alt="..." />
+        <div className="card-body">
+          <h5 className="card-title">{item.nimi} {item.hinta}€</h5>
+        </div>
+      </Link>
+      ))}
     </div>
-    ))}  
   </div>
   )
 }

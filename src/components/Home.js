@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 export default function Home() {
   return (
     <div className='container'>
-      <Link to="*" className="d-flex justify-content-center mt-3">
+      <Link to="/tuote/6" className="d-flex justify-content-center mt-3">
         <img className='w-100' src={carousel1} alt="" />
       </Link>
       <div className="d-flex flex-nowrap">

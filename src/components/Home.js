@@ -1,43 +1,29 @@
 import React from 'react'
 import carousel1 from '../images/3beluga_rdy.jpg'
+import carousel2 from '../images/3leg_crocs_test_resized.png'
 import { Link } from 'react-router-dom'
+
 
 export default function Home() {
   return (
-    <div className='container'>
-      <Link to="/tuote/6" className="d-flex justify-content-center mt-3">
-        <img className='w-100' src={carousel1} alt="" />
-      </Link>
-      <div className="d-flex flex-nowrap">
-        <div className="card w-25 m-3">
-          <img src="https://images.stockx.com/360/Air-Jordan-5-Retro-UNC-University-Blue/Images/Air-Jordan-5-Retro-UNC-University-Blue/Lv2/img01.jpg?fm=avif&auto=compress&w=576&dpr=1&updated_at=1678267312&h=384&q=57" alt="" className="card-img-top" />
-          <div className="card-body">
-            <h5>Jordan 5 Retro UNC University blue</h5>
-            <h3>€248</h3>
+    <>
+      <div className='container'>
+        <div className="row">
+          <div className="carousel slide" data-bs-ride="carousel">
+            <div className="carousel-inner">
+              <Link className="carousel-item active" to="/tuote/6">
+                <img src={carousel1} alt="..." className="d-block w-100" />
+              </Link>
+              <Link className="carousel-item" to="/tuote/13">
+                <img src={carousel2} alt="..." className="d-block w-100" />
+              </Link>
+            </div>
           </div>
         </div>
-        <div className="card w-25 m-3">
-          <img src="https://images.stockx.com/360/Air-Jordan-5-Retro-UNC-University-Blue/Images/Air-Jordan-5-Retro-UNC-University-Blue/Lv2/img01.jpg?fm=avif&auto=compress&w=576&dpr=1&updated_at=1678267312&h=384&q=57" alt="" className="card-img-top" />
-          <div className="card-body">
-            <h5>Jordan 5 Retro UNC University blue</h5>
-            <h3>€248</h3>
-          </div>
-        </div>
-        <div className="card w-25 m-3">
-          <img src="https://images.stockx.com/360/Air-Jordan-5-Retro-UNC-University-Blue/Images/Air-Jordan-5-Retro-UNC-University-Blue/Lv2/img01.jpg?fm=avif&auto=compress&w=576&dpr=1&updated_at=1678267312&h=384&q=57" alt="" className="card-img-top" />
-          <div className="card-body">
-            <h5>Jordan 5 Retro UNC University blue</h5>
-            <h3>€248</h3>
-          </div>
-        </div>
-        <div className="card w-25 m-3">
-          <img src="https://images.stockx.com/360/Air-Jordan-5-Retro-UNC-University-Blue/Images/Air-Jordan-5-Retro-UNC-University-Blue/Lv2/img01.jpg?fm=avif&auto=compress&w=576&dpr=1&updated_at=1678267312&h=384&q=57" alt="" className="card-img-top" />
-          <div className="card-body">
-            <h5>Jordan 5 Retro UNC University blue</h5>
-            <h3>€248</h3>
-          </div>
+        <div className="row">
+          Jottai
         </div>
       </div>
-    </div>
+    </>
   )
 }

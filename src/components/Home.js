@@ -9,7 +9,7 @@ export default function Home() {
     <>
       <div className='container'>
         <div className="row">
-          <div className="carousel slide" data-bs-ride="carousel">
+          <div className="carousel slide ratio ratio-21x9" data-bs-ride="carousel">
             <div className="carousel-inner">
               <Link className="carousel-item active" to="/tuote/6">
                 <img src={carousel1} alt="..." className="d-block w-100" />

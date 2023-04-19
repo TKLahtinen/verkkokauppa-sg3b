@@ -25,10 +25,31 @@ export default function Product() {
  
   return (
     <div className='container'>
-      <img src={item.img} alt="" />
-      <h3>{item.nimi}</h3>
-      <p>{item.kuvaus}</p>
-      <h3>{item.hinta}€</h3>
+      <div className="row row-md my-3">
+        <div className="col-lg ratio ratio-16x9">
+          <img src={item.img} className='w-100' alt="" />
+        </div>
+        <div className="col-lg">
+          <h2>{item.nimi}</h2>
+          <h3>{item.hinta}€</h3>
+          <hr />
+          <p>{item.kuvaus}</p>
+          <form action="">
+            <div className="row">
+              <div className="col">
+                <select name="kpl" id="kpl" className='form-select'>
+                  <option selected value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
+              <div className="col d-grid">
+                <button className='btn btn-primary'>Lisää ostoskoriin</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
       
     </div>
   )

@@ -48,22 +48,6 @@ a.productlink{
   font-weight: bolder;
 }
 
-.carousel-inner img {
-  
-  object-position: center;
-  height: 50vh;
-  overflow: hidden;
-}
-.carousel-caption {
-position:absolute;
-top: 50%;
-}
-.carousel-caption h1 {
-font-size: 400%;
-text-transform: uppercase;
-text-shadow: 2px 2px 15px #000;
-}
-
 footer {
   position: absolute;
   bottom: 0;

@@ -28,7 +28,7 @@ export default function Search() {
   <div className='container d-flex'>
     <div className="row">
       {items.map(item => (
-      <Link to={'/tuote/' + item.tuoteid} className="card m-3 w-25 p-0 productlink" key={item.id}>
+      <Link to={'/tuote/' + item.tuoteid} className="card p-4 my-3 productlink col-md-6 col-lg-4 col-xl-3" key={item.id}>
           <img src={item.img} class="card-img-top w-100 " alt="..." />
         <div className="card-body">
           <h5 className="card-title">{item.nimi} {item.hinta}€</h5>

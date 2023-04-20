@@ -65,14 +65,19 @@ text-shadow: 2px 2px 15px #000;
 }
 
 footer {
-  min-height: 250px;
+  position: absolute;
+  bottom: 0;
   width: 100%;
+  height: 180px;
   background-color: rgb(226, 225, 225);
 }
 
 .social a {
   font-size: 3.5em;
-  padding: 3rem;
+  padding-right: 3rem;
+  padding-left: 3rem;
+  padding-bottom: 0;
+  padding-top: 0;
 }
 .bi-facebook {
   color: #3b5998;

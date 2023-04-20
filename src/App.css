@@ -80,7 +80,7 @@ footer {
   width: 200%; /* set the width to fill the parent container */
   overflow-x: scroll; /* add a horizontal scroll bar */
   overflow-y: hidden;
-  height: 280px;
+  height: 310px;
 }
 
 .products-list {
@@ -97,7 +97,7 @@ footer {
 .product-item img {
   max-width: 100%;
   height: auto;
-
+  padding: 20px;
 }
  @media (max-width: 992px) {
   .social a {

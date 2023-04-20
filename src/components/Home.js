@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <div className='container'>
-        <div className="row">
+        <div className="row my-3">
           <div className="carousel slide ratio ratio-21x9" data-bs-ride="carousel">
             <div className="carousel-inner">
               <Link className="carousel-item active" to="/tuote/6">
@@ -20,8 +20,18 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="row">
-          Jottai
+        <div className="row mb-3">
+          <h3>
+            3bootleg
+          </h3>
+          <hr/>
+          <p>
+          Haluamme tarjota sinulle laadukkaita kenkiä jokaiseen tilanteeseen ja tarpeeseen. Olit sitten etsimässä tyylikkäitä juhlakenkiä, mukavia kävelykenkiä tai kestäviä lenkkareita, meillä on laaja valikoima eri merkkejä ja malleja, jotka vastaavat tarpeitasi.
+          </p>
+          <p>Meidän kenkämme ovat valmistettu korkealaatuisista materiaaleista, joten voit olla varma niiden kestävyydestä ja mukavuudesta. Lisäksi tarjoamme laajan valikoiman eri kokoja ja leveyksiä, jotta jokaisen asiakkaan on helppo löytää juuri sopivat kengät.</p>
+          <p>
+          Tutustu valikoimaamme ja löydä uudet suosikkikenkäsi!
+          </p>
         </div>
       </div>
     </>

@@ -76,6 +76,28 @@ footer {
   color: #bb0000;
  }
 
+.products-container {
+  width: 200%; /* set the width to fill the parent container */
+  overflow-x: scroll; /* add a horizontal scroll bar */
+  overflow-y: hidden;
+  height: 250px;
+}
+
+.products-list {
+  display: flex;
+  flex-wrap: nowrap; /* prevent wrapping of product items */
+}
+
+.product-item {
+  flex-shrink: 0; /* prevent product items from shrinking */
+  width: 250px; /* set the width of each product item */
+  text-align: center;
+}
+
+.product-item img {
+  max-width: 100%;
+  height: auto;
+}
  @media (max-width: 992px) {
   .social a {
     font-size: 2.5em;

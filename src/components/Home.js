@@ -41,6 +41,7 @@ export default function Home() {
         <div className='col-6'>
           <div className='products-container scroll-box'>
             <h3>Picked for you</h3>
+            <hr></hr>
             <div className='products-list'>
               <Link className='product-item' to="/tuote/12">
                 <img src={tuote1} alt='Product 1' />

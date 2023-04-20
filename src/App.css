@@ -80,7 +80,7 @@ footer {
   width: 200%; /* set the width to fill the parent container */
   overflow-x: scroll; /* add a horizontal scroll bar */
   overflow-y: hidden;
-  height: 250px;
+  height: 280px;
 }
 
 .products-list {

@@ -43,27 +43,27 @@ export default function Home() {
             <h3>Picked for you</h3>
             <hr></hr>
             <div className='products-list'>
-              <Link className='product-item' to="/tuote/12">
+              <Link className='product-item productlink' to="/tuote/12">
                 <img src={tuote1} alt='Product 1' />
                 <p>Converse Chuck Taylor 1970s HI Amber Pink</p>
               </Link>
-              <Link className='product-item' to="/tuote/7">
+              <Link className='product-item productlink' to="/tuote/7">
                 <img src={tuote2} alt='Product 2' />
                 <p>Air Jordan 1 Low True Blue & Cement Grey White</p>
                 </Link>
-              <Link className='product-item' to="/tuote/11">
+              <Link className='product-item productlink' to="/tuote/11">
                 <img src={tuote3} alt='Product 3' />
                 <p>DC Shoes Court Graffik Skeittikengät</p>
               </Link>
-              <Link className='product-item' to="/tuote/10">
+              <Link className='product-item productlink' to="/tuote/10">
                 <img src={tuote4} alt='Product 4' />
                 <p>DC Shoes Pure SE Hi-Top Skeittikengät</p>
               </Link>
-              <Link className='product-item' to="/tuote/8">
+              <Link className='product-item productlink' to="/tuote/8">
                 <img src={tuote5} alt='Product 5' />
                 <p>Vans UA Old Skool Tennarit</p>
               </Link>
-              <Link className='product-item' to="/tuote/9">
+              <Link className='product-item productlink' to="/tuote/9">
                 <img src={tuote6} alt='Product 6' />
                 <p>Adidas Superstar tennarit</p>
               </Link>

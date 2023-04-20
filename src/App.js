@@ -11,19 +11,17 @@ import Search from './components/Search';
 
 function App() {
   return (
-    <>
-    <Header />
-    <Navbar />
-    <>
-      <Routes>
-        <Route path="*" element={<Home />} />
-        <Route path="/tuotteet/:tr" element={<Products />} />
-        <Route path="/tuote/:tuoteid" element={<Product />} />
-        <Route path="/haku/:searchQuery" element={<Search />} />
-      </Routes>
-    </>
-    <Footer />
-    </>
+    <div className='app'>
+      <Header />
+      <Navbar />
+        <Routes>
+          <Route path="*" element={<Home />} />
+          <Route path="/tuotteet/:tr" element={<Products />} />
+          <Route path="/tuote/:tuoteid" element={<Product />} />
+          <Route path="/haku/:searchQuery" element={<Search />} />
+        </Routes>   
+      <Footer />
+    </div>
   );
 }
 

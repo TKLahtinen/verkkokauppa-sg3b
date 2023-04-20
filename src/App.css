@@ -1,3 +1,7 @@
+.app{
+  min-height: 100vh;
+}
+
 div .tuote{
   height: 100px;
   width: 100px;
@@ -61,8 +65,7 @@ text-shadow: 2px 2px 15px #000;
 }
 
 footer {
-  position: fixed;
-  bottom: 0;
+  min-height: 250px;
   width: 100%;
   background-color: rgb(226, 225, 225);
 }

@@ -7,6 +7,7 @@ import Home from './components/Home';
 import { Route,Routes } from 'react-router-dom';
 import Product from './components/Product';
 import Products from './components/Products';
+import RegisterForm from './components/RegisterForm';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="*" element={<Home />} />
         <Route path="/tuotteet/:tr" element={<Products />} />
         <Route path="/tuote/:tuoteid" element={<Product />} />
+        <Route path="/signin" element={<RegisterForm />} />
       </Routes>
     </>
     <Footer />

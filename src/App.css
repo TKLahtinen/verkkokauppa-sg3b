@@ -10,6 +10,10 @@ div .tuote{
   border: 1px solid black;
 }
 
+.productlink :hover {
+  color: #abc4ff;
+}
+
 header{
   width: 100%;
   height: 125px;

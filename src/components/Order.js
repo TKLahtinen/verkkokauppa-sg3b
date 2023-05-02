@@ -39,7 +39,7 @@ export default function Order({updateAmount, removeFromCart, cart}) {
             sum+=parseFloat(product.hinta);
             return (
               <tr key={uuidv4()}>
-                <td ><img src={product.img} className='shoppingCartImg' /></td>
+                <td ><img src={product.img} className='w-25' /></td>
                 <td>{product.nimi}</td>
                 <td>{product.hinta} €</td>
                 <td>

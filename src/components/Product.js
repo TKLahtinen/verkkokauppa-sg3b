@@ -3,11 +3,12 @@ import { useState,useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
 
-export default function Product() {
+export default function Product({addToCart}) {
 
   const params = useParams()
   const URL = 'http://localhost:3001/phpbackend/getProduct.php?tuoteid=';
   const [item, setItem] = useState([])
+
 
   console.log(URL + params.tuoteid)
 
@@ -22,6 +23,9 @@ export default function Product() {
       alert(error.response === undefined ? error : error.response.data.error)
     })
   }, [])
+
+
+
  
   return (
     <div className='container'>
@@ -34,20 +38,11 @@ export default function Product() {
           <h3>{item.hinta}€</h3>
           <hr />
           <p>{item.kuvaus}</p>
-          <form action="">
             <div className="row">
-              <div className="col">
-                <select name="kpl" id="kpl" className='form-select'>
-                  <option selected value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                </select>
-              </div>
               <div className="col d-grid">
-                <button className='btn btn-primary'>Lisää ostoskoriin</button>
+                <button className='btn btn-primary' onClick={e => addToCart(item)}>Lisää ostoskoriin</button>
               </div>
             </div>
-          </form>
         </div>
       </div>
       

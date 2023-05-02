@@ -7,6 +7,7 @@ import logo from '../images/Logo.png'
 export default function Header() {
 
   return (
+
     <div className='header'>
     <Link className="logolink" to="*">
         <img src={logo} alt="logo"/>

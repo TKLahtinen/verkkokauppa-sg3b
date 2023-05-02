@@ -167,8 +167,6 @@ footer {
   padding: 20px;
 }
 
-/* media queries */
-
  @media (max-width: 992px) {
   .social a {
     font-size: 2.5em;

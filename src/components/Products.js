@@ -17,9 +17,7 @@ export default function Products() {
     axios.get(URL + tr)
       .then((response) => {
         const json = response.data;
-        console.log(json)
         setItems(json)
-        console.log(items)
         
       }).catch(error => {
         alert(error.response === undefined ? error : error.response.data.error);

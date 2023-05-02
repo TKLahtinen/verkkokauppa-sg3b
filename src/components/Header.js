@@ -2,7 +2,6 @@ import React from 'react'
 import { useRef,useState } from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../images/Logo.png'
-import register from '../images/register.png'
 
 
 export default function Header() {
@@ -13,8 +12,9 @@ export default function Header() {
         <img src={logo} alt="logo"/>
       </Link>
     <ul className="icon-area">
-      <li className='icon-item'><Link className="icon-link" to="*"><img src={register}/>Kirjaudu sisään</Link></li>
-      <li className='icon-item'><Link className="icon-link" to="*"><img src={register}/>Rekisteröidy</Link></li>
+      <li className='icon-item'><Link className="icon-link" to="*"><i class="bi bi-door-open-fill"></i>Kirjaudu sisään</Link></li>
+      <li className='icon-item'><Link className="icon-link" to="*"><i class="bi bi-box-arrow-in-right"></i>Rekisteröidy</Link></li>
+      <li className='icon-item'><Link className='icon-link'to="*"><i class="bi bi-cart-fill"></i>Ostoskori</Link></li>
     </ul>
     </div>
   )

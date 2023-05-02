@@ -6,29 +6,17 @@ import logo from '../images/Logo.png'
 
 export default function Header() {
 
-  const searchInput = useRef()
-
-  function handleSearch(e) {
-    e.preventDefault()
-    const searchQuery = searchInput.current.value
-    console.log(searchQuery)
-    window.location.href = '/haku/' + searchQuery
-    
-  }
-
   return (
-    <header className='d-flex justify-content-between align-items-center'>
-      <Link className="headerLeft ms-3" to="/">
-        <img src={logo} alt="logo" className="w-100" />
+
+    <div className='header'>
+    <Link className="logolink" to="*">
+        <img src={logo} alt="logo"/>
       </Link>
-      <div className="headerCenter d-flex">
-        <input type="text" className="form-control me-3" placeholder='Haku' ref={searchInput} />
-        <button className="btn btn-light" onClick={handleSearch}> Hae </button>
-      </div>
-      <div className="headerRight me-3">
-        <button className="btn btn-primary">Sign In</button> 
-        <button className="btn btn-light">Log In</button>
-      </div>
-    </header>
+    <ul className="icon-area">
+      <li className='icon-item'><Link className="icon-link" to="*"><i class="bi bi-door-open-fill"></i>Kirjaudu sisään</Link></li>
+      <li className='icon-item'><Link className="icon-link" to="*"><i class="bi bi-box-arrow-in-right"></i>Rekisteröidy</Link></li>
+      <li className='icon-item'><Link className='icon-link'to="*"><i class="bi bi-cart-fill"></i>Ostoskori</Link></li>
+    </ul>
+    </div>
   )
 }

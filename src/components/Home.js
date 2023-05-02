@@ -23,7 +23,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
-          <div className="row mb-3">
+          <div className="row mt-2 mb-3">
               <h3>
                 3bootleg
               </h3>

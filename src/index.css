@@ -1,6 +1,23 @@
 html {
   position: relative;
   min-height: 100%;
+  scrollbar-width: normal;  
+  scrollbar-color: #abc4ff #c1d3fe;
+}
+html::-webkit-scrollbar {
+  width: 1vw;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #abc4ff;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background-color: #80a5fa;
+}
+
+html::-webkit-scrollbar-track {
+  background-color: #c1d3fe;
 }
 
 body {

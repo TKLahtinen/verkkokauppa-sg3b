@@ -18,7 +18,7 @@ export default function Header() {
 
   return (
     <header className='d-flex justify-content-between align-items-center'>
-      <Link className="headerLeft ms-3" to="*">
+      <Link className="headerLeft ms-3" to="/">
         <img src={logo} alt="logo" className="w-100" />
       </Link>
       <div className="headerCenter d-flex">

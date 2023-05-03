@@ -23,10 +23,10 @@ export default function Header() {
     <ul className="icon-area">
     {userData ? (
         <>          
-          <li className='icon-item'>
-            <button className='icon-link' onClick={handleLogout}>
-              Log out
-            </button>
+          <li className='icon-item'><i className="bi bi-x-circle"></i>
+            <Link className='icon-link' onClick={handleLogout}>
+              Kirjaudu ulos
+            </Link>
           </li>
           <li className='icon-item'>
             <Link className='icon-link' to='/kayttaja'>

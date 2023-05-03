@@ -38,10 +38,7 @@ export default function Navbar() {
               </ul>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="">Placeholder</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="">Placeholder</Link>
+              <Link className="nav-link" to="/contact">Yhteystiedot</Link>
             </li>
           </ul>
           <form className="d-flex" id="search">

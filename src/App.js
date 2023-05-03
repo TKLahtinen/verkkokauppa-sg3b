@@ -21,7 +21,7 @@ import Account from './components/Account';
 import Contact from './components/Contact';
 import Admin from './components/Admin';
 
-const URL = './phpbackend/'
+const URL = 'https://www.students.oamk.fi/~n2lati00/phpbackend/'
 
 function App() {
   const [cart,setCart] = useState([]);

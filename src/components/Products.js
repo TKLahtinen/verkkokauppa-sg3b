@@ -6,7 +6,7 @@ import { Link,useParams } from 'react-router-dom';
 
 
 
-export default function Products(url) {
+export default function Products({url}) {
 
     const { tr } = useParams()
     const URL = url + 'getProducts.php?tr=';

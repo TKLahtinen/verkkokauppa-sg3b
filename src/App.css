@@ -36,10 +36,10 @@
   transition: 0.5s ease;
 }
 .logolink img {
-width: 150px;
+width: 180px;
 padding-left: 1%;
 padding-right: 1%;
-margin-top: 15px;
+margin-top: 25px;
 margin-left: 5px;
 }
 
@@ -183,13 +183,14 @@ footer {
   }
   @media (max-width: 768px) {
     .logolink img {
-      margin-top: 18px;
+      margin-top: 40px;
       width: 130px;
   }
   .icon-area li{
     font-size: 15px;
     margin-top: 15px;
   }
+
 }
 
 /* contact */
@@ -353,4 +354,18 @@ footer {
 #account-container .product-quantity {
   font-size: 1rem;
   color: #999;
+}
+
+/*  Home.js <p>  */
+
+.row-custom {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 20px;
+  margin-left: 3px;
+}
+
+.row-custom p {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
 }

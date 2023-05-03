@@ -23,19 +23,13 @@ export default function Home() {
             </Link>
           </div>
         </div>
-          <div className="row mt-2 mb-3">
-              <h3>
-              3Bootleg
-              </h3>
-              <hr/>
-              <p>
-              Haluamme tarjota sinulle laadukkaita kenkiä jokaiseen tilanteeseen ja tarpeeseen. Olit sitten etsimässä tyylikkäitä juhlakenkiä, mukavia kävelykenkiä tai kestäviä lenkkareita, meillä on laaja valikoima eri merkkejä ja malleja, jotka vastaavat tarpeitasi.
-              </p>
-              <p>Meidän kenkämme ovat valmistettu korkealaatuisista materiaaleista, joten voit olla varma niiden kestävyydestä ja mukavuudesta. Lisäksi tarjoamme laajan valikoiman eri kokoja ja leveyksiä, jotta jokaisen asiakkaan on helppo löytää juuri sopivat kengät.</p>
-              <p>
-              Tutustu valikoimaamme ja löydä uudet suosikkikenkäsi!
-              </p>
+        <div className="row row-custom mt-2 mb-3">
+          <div className="col">
+            <p>Haluamme tarjota sinulle laadukkaita kenkiä jokaiseen tilanteeseen ja tarpeeseen. Olit sitten etsimässä tyylikkäitä juhlakenkiä, mukavia kävelykenkiä tai kestäviä lenkkareita, meillä on laaja valikoima eri merkkejä ja malleja, jotka vastaavat tarpeitasi.</p>
+            <p>Meidän kenkämme ovat valmistettu korkealaatuisista materiaaleista, joten voit olla varma niiden kestävyydestä ja mukavuudesta. Lisäksi tarjoamme laajan valikoiman eri kokoja ja leveyksiä, jotta jokaisen asiakkaan on helppo löytää juuri sopivat kengät.</p>
+            <p>Tutustu valikoimaamme ja löydä uudet suosikkikenkäsi!</p>
           </div>
+        </div>
       </div>
       <div className='productRow'>
         <div className='col-6'>

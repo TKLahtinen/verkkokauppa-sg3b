@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { createRef } from 'react'
 import { v4 as uuidv4 } from 'uuid';
+import axios from 'axios';
 
 
 
@@ -28,6 +29,24 @@ export default function Order({updateAmount, removeFromCart, cart}) {
 
     }
 
+    function handleOrder(){
+      const userData = JSON.parse(sessionStorage.getItem('userData'));
+      const cart = JSON.parse(localStorage.getItem('cart'));
+      const data = {
+        userData: userData[0],
+        cart: cart
+      }
+
+      axios.post('http://localhost:3001/phpbackend/order.php', data)
+      .then(response => {
+        console.log("tilaus onnistui")
+        localStorage.removeItem('cart');
+    })
+    .catch(error => {
+        console.log(error)
+    })
+    }
+
     let sum = 0;
   return (
     <div className='container'>
@@ -53,7 +72,7 @@ export default function Order({updateAmount, removeFromCart, cart}) {
             <td></td>
             <td></td>
             <td>{sum.toFixed(2)} €</td>
-            <td><button className="btn btn-primary">Tilaa</button></td>
+            <td><button className="btn btn-primary" onClick={handleOrder}>Tilaa</button></td>
             <td></td>
           </tr>
         </tbody>

@@ -14,6 +14,10 @@ import Login from './components/Login';
 import Signin from './components/Signin';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import './toastify.css';
+
 
 function App() {
   const [cart,setCart] = useState([]);
@@ -39,6 +43,7 @@ function App() {
       const newCart = [...cart, product]
       setCart(newCart)
       localStorage.setItem('cart', JSON.stringify(newCart))
+      toast.info('Tuote lisätty ostoskoriin!');
     }
   }
   function removeFromCart(product){
@@ -77,6 +82,7 @@ function App() {
     <div className='app'>
       <Header />
       <Navbar />
+      <ToastContainer />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/tuotteet/:tr" element={<Products />} />

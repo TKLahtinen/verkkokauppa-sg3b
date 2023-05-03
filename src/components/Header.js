@@ -29,7 +29,7 @@ export default function Header() {
             </button>
           </li>
           <li className='icon-item'>
-            <Link className='icon-link' to='/'>
+            <Link className='icon-link' to='/kayttaja'>
             <i className="bi bi-person-circle"></i>
               {userData[0].username}
             </Link>

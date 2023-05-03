@@ -17,6 +17,7 @@ import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './toastify.css';
+import Account from './components/Account';
 
 
 function App() {
@@ -91,6 +92,7 @@ function App() {
           <Route path='/tilaus' element={<Order cart={cart} removeFromCart={removeFromCart} updateAmount={updateAmount} />} />
           <Route path='/login' element={<Login handleLogin= {handleLogin} msg={msg}/>} />
           <Route path="/signup" element={<Signin />} />
+          <Route path="/kayttaja" element={<Account/>} />
         </Routes>   
       <Footer />
     </div>

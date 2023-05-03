@@ -1,6 +1,6 @@
 <?php
 
-require "dbconnection.php";
+require "./dbconnection.php";
 
 function registerUser($username, $password) {
     $dbcon = createDbConnection();

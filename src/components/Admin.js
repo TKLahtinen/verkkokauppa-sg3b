@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form'
 import axios from 'axios'
 import { useState } from 'react'
 
-export default function Admin() {
+export default function Admin({url}) {
 
   
   const userData = JSON.parse(sessionStorage.getItem('userData'))
@@ -16,7 +16,7 @@ export default function Admin() {
 
   
   function addCategory(data) {
-        axios.post('http://localhost:3001/phpbackend/addCategory.php', data)
+        axios.post(url + 'addCategory.php', data)
         .then(res => {
             const data = res.data
             setMessageTr(data.message)
@@ -29,7 +29,7 @@ export default function Admin() {
   }
   
   function addItem(data) {
-        axios.post('http://localhost:3001/phpbackend/addProduct.php', data)
+        axios.post(url+'addProduct.php', data)
         .then(res => {
             const data = res.data
             setMessageAi(data.message)
@@ -42,7 +42,7 @@ export default function Admin() {
   }
   
   function deleteItem(data) {
-        axios.post('http://localhost:3001/phpbackend/deleteItem.php', data)
+        axios.post(url+'deleteItem.php', data)
         .then(res => {
             const data = res.data
             setMessageDi(data.message)

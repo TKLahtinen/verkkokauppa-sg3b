@@ -1,6 +1,6 @@
 <?php
-require "headers.php";
-require "dbconnection.php";
+require "./headers.php";
+require "./dbconnection.php";
 header('Content-type: application/json');
 
 $dbcon = createDbConnection();

@@ -3,12 +3,12 @@ import {useState} from 'react'
 import axios from 'axios';
 import  {useForm} from 'react-hook-form'
 
-export default function Signin() {
+export default function Signin({url}) {
     const {register, handleSubmit} = useForm();
     const [msg, setMsg] = useState('');
 
     function onSubmit(data){
-        axios.post('http://localhost:3001/phpbackend/SignIn.php', data)
+        axios.post(url + 'SignIn.php', data)
         .then(resp => {
             setMsg(resp.data)
         })

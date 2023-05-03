@@ -3,7 +3,7 @@ import { set, useForm } from 'react-hook-form'
 import axios from 'axios'
 import { useState } from 'react';
 
-export default function Login({handleLogin, msg}) {
+export default function Login({url, handleLogin, msg}) {
 
     const {register, handleSubmit} = useForm();
 

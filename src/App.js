@@ -21,6 +21,7 @@ import Account from './components/Account';
 import Contact from './components/Contact';
 import Admin from './components/Admin';
 
+const URL = './phpbackend/'
 
 function App() {
   const [cart,setCart] = useState([]);
@@ -64,7 +65,7 @@ function App() {
   }
 
   function handleLogin(data){
-    axios.post('http://localhost:3001/phpbackend/Login.php', data)
+    axios.post(URL + 'Login.php', data)
     .then(resp => {
         const json = (resp.data)
         setUserData(json)
@@ -89,14 +90,14 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/tuotteet/:tr" element={<Products />} />
-          <Route path="/tuote/:tuoteid" element={<Product addToCart={addToCart} />} />
-          <Route path="/haku/:searchQuery" element={<Search />} />
-          <Route path='/tilaus' element={<Order cart={cart} removeFromCart={removeFromCart} updateAmount={updateAmount} />} />
-          <Route path='/login' element={<Login handleLogin= {handleLogin} msg={msg}/>} />
-          <Route path="/signup" element={<Signin />} />
-          <Route path="/kayttaja" element={<Account/>} />
-          <Route path='/admin' element={<Admin />} />
+          <Route path="/tuotteet/:tr" element={<Products url={URL}/>} />
+          <Route path="/tuote/:tuoteid" element={<Product addToCart={addToCart} url={URL}/>} />
+          <Route path="/haku/:searchQuery" element={<Search url={URL}/>} />
+          <Route path='/tilaus' element={<Order cart={cart} removeFromCart={removeFromCart} updateAmount={updateAmount} url={URL}/>} />
+          <Route path='/login' element={<Login handleLogin= {handleLogin} msg={msg} url={URL}/>} />
+          <Route path="/signup" element={<Signin url={URL}/>} />
+          <Route path="/kayttaja" element={<Account url={URL}/>} />
+          <Route path='/admin' element={<Admin url={URL}/>} />
         </Routes>   
       <Footer />
     </div>

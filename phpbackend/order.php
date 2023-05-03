@@ -1,7 +1,7 @@
 <?php  
 
-require 'headers.php';
-require 'dbconnection.php';
+require './headers.php';
+require './dbconnection.php';
 
 $body = file_get_contents("php://input");
 $data = json_decode($body);

@@ -5,7 +5,7 @@ import { useLocation } from 'react-router'
 
 
 
-export default function Account() {
+export default function Account({url}) {
     const [orders, setOrders] = useState([])
     const location = useLocation()
 
@@ -23,7 +23,7 @@ export default function Account() {
         const userData = JSON.parse(sessionStorage.getItem('userData'))
         const userId = userData[0].id
 
-        axios.get('http://localhost:3001/phpbackend/getOrders.php?userid='+userId)
+        axios.get(url +'getOrders.php?userid='+userId)
         .then(res => {
             setOrders(res.data)
             console.log(res.data)

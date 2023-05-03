@@ -1,7 +1,7 @@
 <?php
 
-require 'headers.php';
-require 'dbconnection.php';
+require './headers.php';
+require './dbconnection.php';
 
 $dbcon = createDbConnection();
 

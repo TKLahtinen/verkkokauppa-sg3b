@@ -6,10 +6,10 @@ import { Link,useParams } from 'react-router-dom';
 
 
 
-export default function Products() {
+export default function Products(url) {
 
     const { tr } = useParams()
-    const URL = 'http://localhost:3001/phpbackend/getProducts.php?tr=';
+    const URL = url + 'getProducts.php?tr=';
   
   const [items, setItems] = useState([])
 

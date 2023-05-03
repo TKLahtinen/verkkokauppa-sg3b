@@ -3,10 +3,10 @@ import { useState,useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
 
-export default function Product({addToCart}) {
+export default function Product({addToCart, url}) {
 
   const params = useParams()
-  const URL = 'http://localhost:3001/phpbackend/getProduct.php?tuoteid=';
+  const URL = url + 'getProduct.php?tuoteid=';
   const [item, setItem] = useState([])
 
 

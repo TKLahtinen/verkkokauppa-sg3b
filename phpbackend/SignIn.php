@@ -1,7 +1,7 @@
 <?php
 
-require 'headers.php';
-require 'functions.php';
+require './headers.php';
+require './functions.php';
 
 $body = file_get_contents("php://input");
 $user = json_decode($body);

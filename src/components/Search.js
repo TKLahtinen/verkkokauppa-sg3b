@@ -4,15 +4,14 @@ import { useEffect,useState } from 'react'
 import { Link,useParams } from 'react-router-dom';
 
 
-export default function Search() {
+export default function Search({url}) {
 
     const { searchQuery } = useParams()
-    const URL = 'http://localhost:3001/phpbackend/search.php?searchQuery=';
   
   const [items, setItems] = useState([])
 
   useEffect(() => {
-    axios.get(URL + searchQuery)
+    axios.get(url + "search.php?searchQuery=" + searchQuery)
       .then((response) => {
         const json = response.data;
         console.log(json)

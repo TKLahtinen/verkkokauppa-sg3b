@@ -6,7 +6,7 @@ import axios from 'axios';
 
 
 
-export default function Order({updateAmount, removeFromCart, cart}) {
+export default function Order({updateAmount, removeFromCart, cart, url}) {
 
     const [inputs,_] = useState([])
     const [inputIndex, setInputIndex] = useState(-1)
@@ -37,7 +37,7 @@ export default function Order({updateAmount, removeFromCart, cart}) {
         cart: cart
       }
 
-      axios.post('http://localhost:3001/phpbackend/order.php', data)
+      axios.post(url + 'order.php', data)
       .then(response => {
         console.log("tilaus onnistui")
         localStorage.removeItem('cart');

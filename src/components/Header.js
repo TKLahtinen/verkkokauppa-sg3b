@@ -7,9 +7,11 @@ import logo from '../images/Logo.png'
 export default function Header() {
 
   const userData = JSON.parse(sessionStorage.getItem('userData'))
+  const userCart = JSON.parse(localStorage.getItem('cart'))
 
   function handleLogout() {
     sessionStorage.removeItem('userData');
+    localStorage.removeItem('cart');
     window.location.reload();
   }
 

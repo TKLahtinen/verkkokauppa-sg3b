@@ -6,7 +6,7 @@ header('Content-type: application/json');
 $dbcon = createDbConnection();
 
 $category = $_GET["tr"];
-$sql = "SELECT * FROM tuote WHERE tr='$category'";
+$sql = "SELECT * FROM tuote WHERE trid IN(SELECT trid FROM tuoteryhma WHERE trnimi = '$category')";
 
 $statement = $dbcon->prepare($sql);
 $statement->execute();

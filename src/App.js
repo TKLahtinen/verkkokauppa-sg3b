@@ -18,6 +18,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './toastify.css';
 import Account from './components/Account';
+import Contact from './components/Contact';
 
 
 function App() {
@@ -86,6 +87,7 @@ function App() {
       <ToastContainer />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/tuotteet/:tr" element={<Products />} />
           <Route path="/tuote/:tuoteid" element={<Product addToCart={addToCart} />} />
           <Route path="/haku/:searchQuery" element={<Search />} />

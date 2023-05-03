@@ -296,3 +296,61 @@ footer {
   font-weight: bold;
   text-shadow: 0px 0px 1px black;
 }
+
+/* account */
+
+#account-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+}
+
+#account-container .order-box {
+  padding: 20px;
+  margin-bottom: 30px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+#account-container .order-number {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #abc4ff;
+}
+
+#account-container .divider {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 20px 0;
+}
+
+#account-container .product-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#account-container .product-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+#account-container .product-img {
+  width: 100px;
+  margin-right: 20px;
+  border-radius: 5px;
+}
+
+#account-container .product-name {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+#account-container .product-quantity {
+  font-size: 1rem;
+  color: #999;
+}

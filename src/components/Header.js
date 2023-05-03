@@ -11,7 +11,7 @@ export default function Header() {
   function handleLogout() {
     sessionStorage.removeItem('userData');
     localStorage.removeItem('cart');
-    window.location.reload();
+    window.location.href = '/';
   }
 
   return (

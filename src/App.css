@@ -24,6 +24,13 @@
   margin-bottom: 2px;
   margin-top: 10px;
 }
+.icon-area button{
+  text-decoration: none;
+  padding: 5px 20px ;
+  font-size: 20px;
+  margin-bottom: 2px;
+  margin-top: 10px;
+}
 .icon-item :hover {
   color: #ffffff;
   transition: 1s ease;

@@ -10,18 +10,29 @@ import Products from './components/Products';
 import Search from './components/Search';
 import { useEffect, useState } from 'react';
 import Order from './components/Order';
+import Login from './components/Login';
+import Signin from './components/Signin';
+import { useForm } from 'react-hook-form';
+import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './toastify.css';
 
+
 function App() {
   const [cart,setCart] = useState([]);
+  const [userData, setUserData] = useState()
+  const [msg, setMsg] = useState("")
 
   useEffect(() => {
     if ('cart' in localStorage) {
       setCart(JSON.parse(localStorage.getItem('cart')))
     }
   }, [])
+
+  useEffect(() => {
+    console.log(userData)
+  }, [userData])
 
   function addToCart(product) {
     if(cart.some(item => item.tuoteid === product.tuoteid)) {
@@ -49,6 +60,24 @@ function App() {
     localStorage.setItem('cart', JSON.stringify(modifiedCart))
   }
 
+  function handleLogin(data){
+    axios.post('http://localhost:3001/phpbackend/Login.php', data)
+    .then(resp => {
+        const json = (resp.data)
+        setUserData(json)
+        if(userData.length > 0){
+            sessionStorage.setItem("userData", JSON.stringify(userData))
+            window.location.href = "/"
+        }
+        else{
+            setMsg("Käyttäjänimi tai salasana virheellinen")
+        }
+    })
+    .catch(error => {
+        setMsg("Kirjautuminen epäonnistui")
+    })
+}
+
   return (
     <div className='app'>
       <Header />
@@ -59,7 +88,9 @@ function App() {
           <Route path="/tuotteet/:tr" element={<Products />} />
           <Route path="/tuote/:tuoteid" element={<Product addToCart={addToCart} />} />
           <Route path="/haku/:searchQuery" element={<Search />} />
-          <Route path='/tilaus' element={<Order cart={cart} removeFromCart={removeFromCart} updateAmount={updateAmount} />} />'
+          <Route path='/tilaus' element={<Order cart={cart} removeFromCart={removeFromCart} updateAmount={updateAmount} />} />
+          <Route path='/login' element={<Login handleLogin= {handleLogin} msg={msg}/>} />
+          <Route path="/signup" element={<Signin />} />
         </Routes>   
       <Footer />
     </div>

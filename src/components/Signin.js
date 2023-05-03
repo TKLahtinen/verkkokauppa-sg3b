@@ -6,7 +6,6 @@ import  {useForm} from 'react-hook-form'
 export default function Signin() {
     const {register, handleSubmit} = useForm();
     const [msg, setMsg] = useState('');
-    const [userData, setUserData] = useState()
 
     function onSubmit(data){
         axios.post('http://localhost:3001/phpbackend/SignIn.php', data)

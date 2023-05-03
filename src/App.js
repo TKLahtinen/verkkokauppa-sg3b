@@ -19,6 +19,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import './toastify.css';
 import Account from './components/Account';
 import Contact from './components/Contact';
+import Admin from './components/Admin';
 
 
 function App() {
@@ -95,6 +96,7 @@ function App() {
           <Route path='/login' element={<Login handleLogin= {handleLogin} msg={msg}/>} />
           <Route path="/signup" element={<Signin />} />
           <Route path="/kayttaja" element={<Account/>} />
+          <Route path='/admin' element={<Admin />} />
         </Routes>   
       <Footer />
     </div>

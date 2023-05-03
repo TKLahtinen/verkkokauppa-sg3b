@@ -13,14 +13,14 @@ $statement = $dbcon->prepare($checkquery);
 $statement->execute(array($data->trnimi, $data->trid));
 
 if($statement->rowCount() > 0){
-    echo json_encode(array("message" => "Category already exists"));
+    echo json_encode(array("message" => "Tuoteryhman nimi tai id  on jo olemassa"));
     exit;
     }
 else{
     $sql = "INSERT INTO tuoteryhma (trid, trnimi) VALUES (?, ?)";
     $statement = $dbcon->prepare($sql);
     $statement->execute(array($data->trid, $data->trnimi));
-    echo json_encode(array("message" => "Category added"));
+    echo json_encode(array("message" => "Tuoteryhmä lisätty onnistuneesti"));
     exit;
 }
 

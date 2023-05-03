@@ -25,7 +25,7 @@ export default function Home() {
         </div>
           <div className="row mt-2 mb-3">
               <h3>
-                3bootleg
+                Bootleg
               </h3>
               <hr/>
               <p>

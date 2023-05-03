@@ -12,7 +12,7 @@ export default function Admin() {
   const { register, handleSubmit }  = useForm()
   const [messageTr, setMessageTr] = useState('')
   const [messageAi, setMessageAi] = useState('')
-
+  const [messageDi, setMessageDi] = useState('')
 
   
   function addCategory(data) {
@@ -27,6 +27,7 @@ export default function Admin() {
         
         })
   }
+  
   function addItem(data) {
         axios.post('http://localhost:3001/phpbackend/addProduct.php', data)
         .then(res => {
@@ -36,6 +37,19 @@ export default function Admin() {
         })
         .catch(err => {
             setMessageAi(err.message)
+        
+        })
+  }
+  
+  function deleteItem(data) {
+        axios.post('http://localhost:3001/phpbackend/deleteItem.php', data)
+        .then(res => {
+            const data = res.data
+            setMessageDi(data.message)
+            
+        })
+        .catch(err => {
+            setMessageDi(err.message)
         
         })
   }
@@ -99,7 +113,7 @@ export default function Admin() {
             </div>
             <span>{messageAi}</span>
             <div className="messagebtn text-center">
-              <button type="submit">Lähetä</button>
+              <button type="submit">Lisää</button>
             </div>
           </form>
             </div>
@@ -113,7 +127,15 @@ export default function Admin() {
           </h2>
           <div id="collapseThree" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
             <div className="accordion-body">
-              <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+            <form onSubmit={handleSubmit(deleteItem)}>
+                    <div className="py-3">
+                    <input type="number" className="form-control" placeholder="Tuoteryhmän id" {...register('tuoteid')}/>
+                    </div>
+                    <span>{messageDi}</span>
+                    <div className="messagebtn text-center">
+                    <button type="submit">Poista</button>
+                    </div>
+            </form>
             </div>
           </div>
         </div>

@@ -24,8 +24,9 @@ export default function Header() {
     <ul className="icon-area">
       {userData ? (
         <>          
-          <li className='icon-item'><i className="bi bi-x-circle"></i>
+          <li className='icon-item'>
             <Link className='icon-link' onClick={handleLogout}>
+              <i className="bi bi-x-circle"></i>
               Kirjaudu ulos
             </Link>
           </li>

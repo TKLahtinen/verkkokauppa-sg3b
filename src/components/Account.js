@@ -35,22 +35,24 @@ export default function Account() {
       }, [location.pathname]);
 
       return (
-        <div className='container'>
-        {Object.keys(ordersById).map((orderId) => (
-            <div key={orderId}>
-            <h2>Tilausnumero: {orderId}</h2>
-            <hr/>
-            <ul>
-                {ordersById[orderId].map((order) => (
-                <li key={order.id}>
-                    <img src={order.img} alt={order.nimi} className='w-25'/>
-                    <h3>{order.nimi}</h3>
-                    <h4>{order.kpl} kpl</h4>
-                </li>
-                ))}
-            </ul>
+<div id="account-container">
+  {Object.keys(ordersById).map((orderId) => (
+    <div key={orderId} id={`order-${orderId}`} class="order-box">
+      <h2 class="order-number">Tilausnumero: {orderId}</h2>
+      <hr class="divider"/>
+      <ul class="product-list">
+        {ordersById[orderId].map((order) => (
+          <li key={order.id} class="product-item">
+            <img src={order.img} alt={order.nimi} class='product-img'/>
+            <div class="product-details">
+              <h3 class="product-name">{order.nimi}</h3>
+              <h4 class="product-quantity">{order.kpl} kpl</h4>
             </div>
+          </li>
         ))}
-        </div>
+      </ul>
+    </div>
+  ))}
+</div>
       );
 }
